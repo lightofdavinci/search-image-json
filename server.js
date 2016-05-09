@@ -16,7 +16,7 @@ var historySchema = new Schema({
 
 var History = mongoose.model('History',historySchema);
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGOLAB_URI);
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
