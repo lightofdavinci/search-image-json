@@ -14,21 +14,79 @@
 		<div class="container">
 		    <h2 id="err">ERROR: YOU NEED TO ADD A PROPER ACTION, SEE EXAMPLES BELOW</h2>
   			<h1>Image Search Abstraction Layer</h1>
-  			<h2>Example creation usage:</h2>
-			  <code>https://urlshortener-sublustrum.c9users.io/new/https://www.google.com</code>
- 				 <br>
- 			 <code>https://urlshortener-sublustrum.c9users.io/new/http://freecodecamp.com/news</code>
- 			 <h2>Example creation output:</h2>
-    			<code>
-                {
-                  "original_url": "http://freecodecamp.com/news",
-                  "short_url": "https://urlshortener-sublustrum.c9users.io/4"
-                }
+  			<h2>Example query usage:</h2>
+			  <code>https://search-image-layer-abstraction.herokuapp.com/dogs%20funny?offset=10</code>
+			  <br>
+			  <code>https://search-image-layer-abstraction.herokuapp.com/latest</code>
+ 			
+ 			 <h2>Example query output:</h2>
+    			<code id="jsonc">
+                [
+  {
+    "url": "http://1.bp.blogspot.com/-FTKHZ2sZOvY/TeH0DyNO4II/AAAAAAAAA4w/ihIseEnfaac/s1600/Funny-Dog.jpg#dog%20pictures",<br>
+    "snippet": "Funny Dog Pictures - Unbound State | Humor , Funny Pictures and ...",<br>
+    "thumbnail": "http://ts1.mm.bing.net/th?id=OIP.M678e76d04173c9b1c3f5008ef96ebd07H0&pid=15.1",<br>
+    "context": "http://unboundstate.blogspot.com/2011/05/funny-dog-pictures.html"<br>
+  },<br>
+  {
+    "url": "http://2.bp.blogspot.com/-Hzbs8mDGnu4/TeHzwt8p2FI/AAAAAAAAA4c/cCNAEOozLUc/s1600/funny-dog-picture-funny-dog-toupee-ever.jpg",<br>
+    "snippet": "funny-dog-picture-funny-dog-toupee-ever.jpg",<br>
+    "thumbnail": "http://ts4.mm.bing.net/th?id=OIP.Mff9c29bf156f23723d37cfaa3b697da8H0&pid=15.1",<br>
+    "context": "http://unboundstate.blogspot.com/2011/05/funny-dog-pictures.html"<br>
+  },<br>
+  {
+    "url": "http://1.bp.blogspot.com/-ehfmokgFwG4/T36E6EaNpSI/AAAAAAAAAn8/6WrYIuAA4Lw/s1600/Funny+Dog-08.jpg",<br>
+    "snippet": "Funny Dogs Most Funny Photos-Images 2012 | Funny And Cute Animals",<br>
+    "thumbnail": "http://ts1.mm.bing.net/th?id=OIP.M43ca893fc7371f5bc4995656b3db10c4H0&pid=15.1",<br>
+    "context": "http://animalzfun.blogspot.com/2012/04/funny-dogs-most-funny-photos-images.html"<br>
+  },<br>
+  {
+    "url": "http://3.bp.blogspot.com/-JU9nBDHKpC4/T_p9yMNpezI/AAAAAAAAEdE/Ie6k9MjOAKk/s1600/funny+dogs+wallpaper_2.jpg",<br>
+    "snippet": "Funny Dogs Wallpaper",<br>
+    "thumbnail": "http://ts1.mm.bing.net/th?id=OIP.M912a824b14db26f3aa9211fe7aba74b4H0&pid=15.1",<br>
+    "context": "http://newallwallpaper.blogspot.com/2012/07/funny-dogs-wallpapers.html"<br>
+  },<br>
+  {
+    "url": "http://3.bp.blogspot.com/-ASCW2XCUmHU/TymDp1j3bsI/AAAAAAAAALA/TxkstyZJLAM/s1600/funny+dog+pictures+(18).jpg",<br>
+    "snippet": "... dog pictures, funny dog pic, funny dog picturs, images of funny dogs",<br>
+    "thumbnail": "http://ts1.mm.bing.net/th?id=OIP.Maacf4f6d56c5198fea5dfe739f60647bH0&pid=15.1",<br>
+    "context": "http://mostpopularphotos.blogspot.com/2012/02/funny-weiner-dog-pictures-funny-pics-of.html"<br>
+  },<br>
+  {
+    "url": "http://3.bp.blogspot.com/-_kVoxQ-KjlA/TqVox_7wnUI/AAAAAAAAAU0/7mHSjaK8Wts/s1600/funny-dogs-images.jpg",<br>
+    "snippet": "Funny Pictures Gallery: funny dogs pictures",<br>
+    "thumbnail": "http://ts4.mm.bing.net/th?id=OIP.Md988c082f53c043b4ce4c0232172f393H0&pid=15.1",<br>
+    "context": "http://stylesfunny.blogspot.com/2011/10/funny-dogs-pictures.html"<br>
+  },<br>
+  {
+    "url": "http://upload.wikimedia.org/wikipedia/commons/6/69/Funny_dog.jpg",<br>
+    "snippet": "File:Funny dog.jpg - Wikipedia, the free encyclopedia",<br>
+    "thumbnail": "http://ts3.mm.bing.net/th?id=OIP.Mcac39e258491564b4a1af85f0094eb61H0&pid=15.1",<br>
+    "context": "http://en.wikipedia.org/wiki/file:funny_dog.jpg"<br>
+  },<br>
+  {
+    "url": "http://2.bp.blogspot.com/-ci9vgsAGGIk/T_p95lOxcmI/AAAAAAAAEdc/A5MH-au6ZEA/s1600/funny+dogs+wallpaper_5.jpg",<br>
+    "snippet": "Funny Dogs Wallpaper",<br>
+    "thumbnail": "http://ts4.mm.bing.net/th?id=OIP.M6f67d20bd2027c8939124bc010e294a6H0&pid=15.1",<br>
+    "context": "http://newallwallpaper.blogspot.com/2012/07/funny-dogs-wallpapers.html"<br>
+  },<br>
+  {
+    "url": "http://2.bp.blogspot.com/-ZXh-8OnRXSY/T84Et9iCUHI/AAAAAAAI7aU/uZYrrIIIwvQ/s1600/funny+dog+images+%2819%29.jpg",<br>
+    "snippet": "Funny dog images, funny dog photo, funny photos of dogs, funny dog ...",<br>
+    "thumbnail": "http://ts3.mm.bing.net/th?id=OIP.Ma5745928d6e1b674f5c3dacf0b63eb46H0&pid=15.1",<br>
+    "context": "http://tedlillyfanclub.blogspot.com/2012/06/funny-dog-images-funny-dog-photo-funny.html"<br>
+  },<br>
+  {
+    "url": "http://4.bp.blogspot.com/-sGtBnygUFmQ/USO5WxdIAXI/AAAAAAAADCY/jfoeAMFNICQ/s1600/funny+dogs+06.jpg",<br>
+    "snippet": "All funny pictures: funny dogs new images 2013",<br>
+    "thumbnail": "http://ts1.mm.bing.net/th?id=OIP.Ma3d072446733bd0d7b0861d3e2c8e737H0&pid=15.1",<br>
+    "context": "http://fuuny-picturez.blogspot.com/2013/02/funny-dogs.html"<br>
+  }
+]
  	          </code>
- 	          <h2>Usage:</h2>
+ 	          <h2>Example latest output:</h2>
  	          <code>https://urlshortener-sublustrum.c9users.io/4</code>
- 	          <h2>Will redirect to:</h2>
- 	          <code>http://freecodecamp.com/news</code>
+ 	          
  	    	<img src="/public/img/clementine_150.png" id="cl"/>	
 		</div>
 
