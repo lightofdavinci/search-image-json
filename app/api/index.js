@@ -12,7 +12,6 @@ module.exports = function(app, History) {
   function handlePost(req, res) {
     // Get images and save query and date.
     var query = req.params.query;
-    var size = req.query.offset || 10; // Number specified or 10
     var search = new Search(process.env.API_KEY);
     var history = {
       "term": query,
@@ -25,9 +24,8 @@ module.exports = function(app, History) {
 
     // Query the image and populate results
     search.images(query, {
-        top: size,
-        limit: 10
-      },
+        top: req.query.offset 
+              },
       function(err, results) {
         if (err) throw err;
         res.send(results.map(makeList));
