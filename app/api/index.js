@@ -24,7 +24,8 @@ module.exports = function(app, History) {
 
     // Query the image and populate results
     search.images(query, {
-        top: req.query.offset 
+        top: 10,
+        skip: req.query.offset * 10
               },
       function(err, results) {
         if (err) throw err;
